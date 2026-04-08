@@ -7,8 +7,8 @@ const projects = [
   {
     title: "Podcast Edit",
     category: "Podcast",
-    url: "https://drive.google.com/drive/folders/1zeXAuRnt6QmK4Sz_cwWp2L3rAuX-1gWQ",
-    embed: null,
+    url: "https://drive.google.com/file/d/1hTpGhH9RP9EuZFgqk5V59Ccgv4EYqfnq/view?usp=sharing",
+    embed: "https://drive.google.com/file/d/1hTpGhH9RP9EuZFgqk5V59Ccgv4EYqfnq/preview",
   },
   {
     title: "Website Tour",
