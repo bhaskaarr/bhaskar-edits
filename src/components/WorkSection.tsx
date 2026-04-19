@@ -40,6 +40,18 @@ const projects = [
     url: "https://www.instagram.com/reel/DUvT_7REjy4/",
     embed: null,
   },
+  {
+    title: "SAAS Product Edit",
+    category: "SAAS",
+    url: "https://drive.google.com/file/d/1IZMqXyT4rH6sIeu0YjZgdPJq-LUMpjPR/view?usp=drive_link",
+    embed: "https://drive.google.com/file/d/1IZMqXyT4rH6sIeu0YjZgdPJq-LUMpjPR/preview",
+  },
+  {
+    title: "AI Document Style",
+    category: "AI / Docs",
+    url: "https://drive.google.com/file/d/1R_tNkNba2Mwy19bE_9fahTp5D862FAqz/view?usp=drive_link",
+    embed: "https://drive.google.com/file/d/1R_tNkNba2Mwy19bE_9fahTp5D862FAqz/preview",
+  },
 ];
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
