@@ -52,6 +52,18 @@ const projects = [
     url: "https://drive.google.com/file/d/1R_tNkNba2Mwy19bE_9fahTp5D862FAqz/view?usp=drive_link",
     embed: "https://drive.google.com/file/d/1R_tNkNba2Mwy19bE_9fahTp5D862FAqz/preview",
   },
+  {
+    title: "SAAS Video",
+    category: "SAAS",
+    url: "https://drive.google.com/file/d/1aej8-acTVCGeA5Kf23j3-ofuctZPI-Qa/view?usp=sharing",
+    embed: "https://drive.google.com/file/d/1aej8-acTVCGeA5Kf23j3-ofuctZPI-Qa/preview",
+  },
+  {
+    title: "Show Reel",
+    category: "Showreel",
+    url: "https://drive.google.com/file/d/1IvCqyzh2O_9eyp0DvRuPmSQYupJRaS4Q/view?usp=sharing",
+    embed: "https://drive.google.com/file/d/1IvCqyzh2O_9eyp0DvRuPmSQYupJRaS4Q/preview",
+  },
 ];
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
