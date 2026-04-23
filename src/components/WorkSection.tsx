@@ -64,6 +64,24 @@ const projects = [
     url: "https://drive.google.com/file/d/1IvCqyzh2O_9eyp0DvRuPmSQYupJRaS4Q/view?usp=sharing",
     embed: "https://drive.google.com/file/d/1IvCqyzh2O_9eyp0DvRuPmSQYupJRaS4Q/preview",
   },
+  {
+    title: "2D Animation",
+    category: "Animation",
+    url: "https://drive.google.com/file/d/1LYBtS_iU6zg8vb8LRPDt0cAL6A1NQJnU/view?usp=sharing",
+    embed: "https://drive.google.com/file/d/1LYBtS_iU6zg8vb8LRPDt0cAL6A1NQJnU/preview",
+  },
+  {
+    title: "Informational",
+    category: "Informational",
+    url: "https://drive.google.com/file/d/13gzxtE0qxCurBrT6WavicXIb3NOt10DZ/view?usp=sharing",
+    embed: "https://drive.google.com/file/d/13gzxtE0qxCurBrT6WavicXIb3NOt10DZ/preview",
+  },
+  {
+    title: "Website Mockup",
+    category: "Mockup",
+    url: "https://drive.google.com/file/d/1FohRoRiW_LDF1kddkNf9MgOeHClC0ir4/view?usp=sharing",
+    embed: "https://drive.google.com/file/d/1FohRoRiW_LDF1kddkNf9MgOeHClC0ir4/preview",
+  },
 ];
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
