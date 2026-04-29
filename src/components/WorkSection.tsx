@@ -1,7 +1,19 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Play } from "lucide-react";
+
+// Extract a YouTube ID from an embed URL like https://www.youtube.com/embed/VIDEO_ID
+const getYouTubeId = (embed: string): string | null => {
+  const m = embed.match(/youtube\.com\/embed\/([\w-]+)/);
+  return m ? m[1] : null;
+};
+
+// Extract a Google Drive file ID from a preview URL
+const getDriveId = (embed: string): string | null => {
+  const m = embed.match(/drive\.google\.com\/file\/d\/([\w-]+)/);
+  return m ? m[1] : null;
+};
 
 const projects = [
   {
@@ -85,8 +97,34 @@ const projects = [
 ];
 
 const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: number }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLAnchorElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  // Only mount the iframe when card is near the viewport AND user activates it
+  const [shouldMount, setShouldMount] = useState(false);
+  const [activated, setActivated] = useState(false);
+
+  // Mount iframe when card enters viewport (slight delay so we don't slam mobile bandwidth)
+  useEffect(() => {
+    if (!isInView) return;
+    const t = setTimeout(() => setShouldMount(true), 150);
+    return () => clearTimeout(t);
+  }, [isInView]);
+
+  const ytId = project.embed ? getYouTubeId(project.embed) : null;
+  const driveId = project.embed ? getDriveId(project.embed) : null;
+  const thumb = ytId ? `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg` : null;
+
+  // For YouTube, defer iframe until click (saves a lot on mobile).
+  // For Drive (no thumbnail API), mount lazily after entering viewport.
+  const showIframe = ytId ? activated : shouldMount;
+
+  const handleClick = (e: React.MouseEvent) => {
+    if (ytId && !activated) {
+      e.preventDefault();
+      setActivated(true);
+    }
+  };
 
   return (
     <motion.a
@@ -94,14 +132,15 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
       href={project.url}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleClick}
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.08 }}
+      transition={{ duration: 0.6, delay: Math.min(index, 5) * 0.06 }}
       whileHover={{ y: -6 }}
       className="group relative block cursor-pointer overflow-hidden border border-foreground/[0.08] bg-[#0a0a0a]"
     >
       <div className="relative aspect-video bg-secondary overflow-hidden">
-        {project.embed ? (
+        {showIframe && project.embed ? (
           <iframe
             src={project.embed}
             className="w-full h-full transition-transform duration-700 group-hover:scale-105"
@@ -109,6 +148,14 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             allowFullScreen
             loading="lazy"
             title={project.title}
+          />
+        ) : thumb ? (
+          <img
+            src={thumb}
+            alt={project.title}
+            loading="lazy"
+            decoding="async"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
@@ -119,10 +166,11 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
         <div className="absolute top-4 right-4 font-display text-5xl text-foreground/10 leading-none pointer-events-none">
           {String(index + 1).padStart(2, "0")}
         </div>
-        {/* hover play badge */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-primary flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-300 pointer-events-none">
-          <Play className="w-5 h-5 text-primary-foreground ml-0.5" fill="currentColor" />
-        </div>
+        {!showIframe && (
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-primary flex items-center justify-center scale-90 group-hover:scale-100 transition-transform duration-300 pointer-events-none">
+            <Play className="w-5 h-5 text-primary-foreground ml-0.5" fill="currentColor" />
+          </div>
+        )}
       </div>
       <div className="p-5 border-t border-foreground/[0.06]">
         <span className="text-[0.65rem] font-medium text-primary uppercase tracking-[0.3em]">
