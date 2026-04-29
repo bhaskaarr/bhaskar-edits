@@ -146,10 +146,16 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
       className="group relative block cursor-pointer overflow-hidden border border-foreground/[0.08] bg-[#0a0a0a]"
     >
       <div className="relative aspect-video bg-secondary overflow-hidden">
+        {/* Shimmer placeholder shown until media loads */}
+        {!mediaLoaded && <div className="skeleton-shimmer" aria-hidden="true" />}
+
         {showIframe && project.embed ? (
           <iframe
             src={project.embed}
-            className="w-full h-full transition-transform duration-700 group-hover:scale-105"
+            onLoad={() => setMediaLoaded(true)}
+            className={`w-full h-full transition-all duration-700 group-hover:scale-105 ${
+              mediaLoaded ? "opacity-100" : "opacity-0"
+            }`}
             allow="autoplay; encrypted-media"
             allowFullScreen
             loading="lazy"
@@ -161,7 +167,11 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
             alt={project.title}
             loading="lazy"
             decoding="async"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            onLoad={() => setMediaLoaded(true)}
+            onError={() => setMediaLoaded(true)}
+            className={`w-full h-full object-cover transition-all duration-700 group-hover:scale-105 ${
+              mediaLoaded ? "opacity-100" : "opacity-0"
+            }`}
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
@@ -173,7 +183,7 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
           {String(index + 1).padStart(2, "0")}
         </div>
         {!showIframe && (
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-primary flex items-center justify-center scale-90 group-hover:scale-100 transition-transform duration-300 pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-primary flex items-center justify-center scale-90 group-hover:scale-100 transition-transform duration-300 pointer-events-none z-10">
             <Play className="w-5 h-5 text-primary-foreground ml-0.5" fill="currentColor" />
           </div>
         )}
