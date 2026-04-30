@@ -70,7 +70,19 @@ const ProjectCard = ({
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   const ytId = getYouTubeId(project.e);
+  const driveId = !ytId ? getDriveId(project.e) : null;
   const ytThumb = ytId ? `https://i.ytimg.com/vi/${ytId}/hqdefault.jpg` : null;
+  const driveThumb = driveId ? `https://drive.google.com/thumbnail?id=${driveId}&sz=w1600` : null;
+  const realThumb = ytThumb || driveThumb;
+  const [thumbFailed, setThumbFailed] = useState(false);
+
+  // Preload drive thumbnail to detect failure (drive thumbnails sometimes 404 / are blocked)
+  useEffect(() => {
+    if (!driveThumb) return;
+    const img = new Image();
+    img.onerror = () => setThumbFailed(true);
+    img.src = driveThumb;
+  }, [driveThumb]);
 
   // Mouse-tracked glow
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
