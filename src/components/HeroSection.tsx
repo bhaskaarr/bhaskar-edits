@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const phrases = [
+  "Edits Engineered For Growth",
   "High-Retention Video Editing",
-  "Edits That Stop The Scroll",
-  "Story-Driven Visuals",
+  "Built To Convert Viewers",
 ];
 
 const HeroSection = () => {
@@ -114,8 +114,8 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.55 }}
           className="max-w-2xl text-lg md:text-xl leading-relaxed mt-8 text-foreground/80"
         >
-          Premium video editing for <span className="text-gold">creators, founders & brands</span> —
-          built to boost retention, watch-time, and conversions.
+          Scroll-stopping edits for <span className="text-gold">creators, founders & brands</span> —
+          designed to hold attention, drive watch-time, and turn viewers into customers.
         </motion.p>
 
         <motion.div
@@ -130,14 +130,14 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 px-7 py-4 bg-primary text-primary-foreground font-display tracking-[0.2em] text-sm uppercase hover:bg-gold hover:text-background transition-colors duration-300"
           >
-            Book a Free Call
+            Start Your Project
             <span className="group-hover:translate-x-1 transition-transform">→</span>
           </a>
           <a
             href="#work"
             className="group inline-flex items-center gap-3 px-7 py-4 border border-foreground/30 text-foreground font-display tracking-[0.2em] text-sm uppercase hover:border-primary hover:text-primary transition-colors duration-300"
           >
-            View My Work
+            See The Work
           </a>
         </motion.div>
 
@@ -147,7 +147,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.85 }}
           className="text-xs md:text-sm text-foreground/50 mt-5 tracking-wide"
         >
-          Helping creators and brands grow with high-retention video editing.
+          Trusted by 35+ creators & brands · Reply within 1 hour · 24–48h delivery
         </motion.p>
 
         <motion.div
@@ -157,9 +157,10 @@ const HeroSection = () => {
           className="flex flex-wrap gap-8 md:gap-14 mt-12 pt-8 border-t border-foreground/10"
         >
           {[
-            { num: "1.5+", label: "Years Experience" },
-            { num: "50+", label: "Projects Completed" },
-            { num: "35+", label: "Clients Served" },
+            { num: "50+", label: "Videos Delivered" },
+            { num: "35+", label: "Brands Served" },
+            { num: "24h", label: "Avg. Turnaround" },
+            { num: "200K+", label: "Views Generated" },
           ].map((s) => (
             <div key={s.label}>
               <div className="font-display text-3xl md:text-4xl text-gold leading-none">{s.num}</div>

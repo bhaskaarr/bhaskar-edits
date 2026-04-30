@@ -4,8 +4,9 @@ import { motion } from "framer-motion";
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Work", href: "#work" },
+  { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
-  { label: "Reviews", href: "#reviews" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -49,7 +50,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="px-5 py-2 bg-primary text-primary-foreground font-display tracking-[0.2em] text-xs uppercase hover:bg-gold hover:text-background transition-colors duration-300"
           >
-            Hire Me
+            Start Project
           </a>
         </div>
         <a
@@ -58,7 +59,7 @@ const Navbar = () => {
           rel="noopener noreferrer"
           className="md:hidden px-4 py-2 bg-primary text-primary-foreground font-display tracking-[0.2em] text-xs uppercase"
         >
-          Hire Me
+          Start Project
         </a>
       </div>
     </motion.nav>

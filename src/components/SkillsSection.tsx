@@ -24,10 +24,10 @@ const SkillsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold">
-            <span className="gradient-text">Software</span> Proficiency
+            The <span className="gradient-text">Toolkit.</span>
           </h2>
           <p className="text-muted-foreground mt-4 text-lg">
-            Tools I use to craft cinematic stories
+            Industry-standard tools, used to deliver agency-grade work.
           </p>
         </motion.div>
 

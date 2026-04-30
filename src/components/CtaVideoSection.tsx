@@ -16,10 +16,10 @@ const CtaVideoSection = () => {
           className="text-center mb-12"
         >
           <h2 className="font-display text-4xl md:text-6xl font-bold leading-tight">
-            Are You Looking For A <span className="gradient-text">Video Editor?</span>
+            See The <span className="gradient-text">Showreel.</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-lg">
-            Watch this — and let my edits speak for themselves.
+            90 seconds of my best work. Pacing, color, and craft — all in one cut.
           </p>
         </motion.div>
 
@@ -52,7 +52,7 @@ const CtaVideoSection = () => {
             rel="noopener noreferrer"
             className="inline-block px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:shadow-[0_0_35px_hsl(174_72%_52%/0.5)] hover:scale-105 transition-all duration-300"
           >
-            Hire Me on WhatsApp
+            Start Your Project
           </a>
         </motion.div>
       </div>

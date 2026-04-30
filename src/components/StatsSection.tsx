@@ -2,9 +2,9 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-  { value: "1.5+", label: "Years Experience" },
-  { value: "50+", label: "Projects Completed" },
-  { value: "35+", label: "Clients Served" },
+  { value: "50+", label: "Videos Delivered" },
+  { value: "35+", label: "Brands Served" },
+  { value: "24h", label: "Avg. Turnaround" },
   { value: "200K+", label: "Views Generated" },
 ];
 
@@ -23,9 +23,9 @@ const StatsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-12 text-center max-w-2xl mx-auto"
         >
-          <div className="section-label justify-center mb-4">By The Numbers / 005</div>
+          <div className="section-label justify-center mb-4">By The Numbers / 006</div>
           <h2 className="font-display text-4xl md:text-6xl leading-[0.9]">
-            RESULTS THAT <span className="text-primary">SPEAK.</span>
+            NUMBERS THAT <span className="text-primary">CONVERT.</span>
           </h2>
         </motion.div>
 

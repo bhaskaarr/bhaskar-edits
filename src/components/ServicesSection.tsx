@@ -5,14 +5,14 @@ import { Film, Youtube, Smartphone, Sparkles, Check } from "lucide-react";
 const services = [
   {
     icon: Smartphone,
-    title: "Short-Form Editing",
+    title: "Short-Form Edits",
     subtitle: "Reels • Shorts • TikTok",
     price: "₹999",
     unit: "/ video",
     features: [
-      "Hook-driven first 3 seconds",
-      "Captions & sound design",
-      "Vertical 9:16 optimized",
+      "Scroll-stopping 3-sec hooks",
+      "Punchy captions & sound design",
+      "Optimized for the algorithm",
       "24–48h turnaround",
     ],
     accent: false,
@@ -24,10 +24,10 @@ const services = [
     price: "₹4,999",
     unit: "/ video",
     features: [
-      "Retention-focused pacing",
-      "B-roll, motion graphics & SFX",
-      "Color grade + audio mix",
-      "Thumbnail concepts included",
+      "Retention-engineered pacing",
+      "B-roll, motion & sound design",
+      "Cinematic color + clean audio mix",
+      "Click-worthy thumbnail concepts",
     ],
     accent: true,
     badge: "Most Popular",
@@ -35,28 +35,28 @@ const services = [
   {
     icon: Film,
     title: "Brand & Ad Edits",
-    subtitle: "SaaS • Promo • Wedding",
+    subtitle: "SaaS • Promo • Commercial",
     price: "Custom",
     unit: "quote",
     features: [
-      "Story-first script collab",
-      "Cinematic color & sound",
-      "Logo & graphic animation",
-      "Multi-format delivery",
+      "Story-led script collaboration",
+      "Cinematic color & sound design",
+      "Logo & motion-graphic system",
+      "Multi-platform delivery",
     ],
     accent: false,
   },
   {
     icon: Sparkles,
     title: "Motion & AI Content",
-    subtitle: "Captions • MoGraph • AI-assist",
+    subtitle: "Captions • MoGraph • AI",
     price: "₹1,999",
     unit: "/ project",
     features: [
       "Animated captions & lower-thirds",
-      "AI voice / avatar integration",
-      "2D motion graphics",
-      "Stylized transitions",
+      "AI voice & avatar workflows",
+      "Custom 2D motion graphics",
+      "Signature transitions & FX",
     ],
     accent: false,
   },
@@ -80,11 +80,11 @@ const ServicesSection = () => {
           <div>
             <div className="section-label mb-4">Services / 001</div>
             <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9]">
-              WHAT I <span className="text-primary">DELIVER</span>
+              EDITS BUILT FOR <span className="text-primary">GROWTH</span>
             </h2>
           </div>
           <p className="text-foreground/60 max-w-md text-base">
-            Clear packages, transparent pricing. Pick what fits — or message me for a tailored quote.
+            Four focused offers. Transparent pricing. Zero fluff. Pick a package or message me for a custom quote.
           </p>
         </motion.div>
 
@@ -152,14 +152,14 @@ const ServicesSection = () => {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-foreground/50">
-            Need a bundle or retainer?{" "}
+            Need a content engine or monthly retainer?{" "}
             <a
               href="https://wa.me/919315219956"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-gold transition-colors underline underline-offset-4"
             >
-              Message me for a custom quote →
+              Get a custom quote →
             </a>
           </p>
         </div>

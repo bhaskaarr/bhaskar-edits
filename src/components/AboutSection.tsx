@@ -4,18 +4,18 @@ import { useRef } from "react";
 const pillars = [
   {
     num: "01",
-    title: "Story First",
-    text: "Every cut serves a goal — retention, conversion, emotion. Polish comes second.",
+    title: "Growth First",
+    text: "Every cut is engineered for retention, watch-time, and conversion — not just polish.",
   },
   {
     num: "02",
     title: "Fast & Reliable",
-    text: "Most projects delivered in 24–72 hours with clear communication and no ghosting.",
+    text: "First drafts in 24–72 hours. Clear updates. No ghosting, no missed deadlines.",
   },
   {
     num: "03",
-    title: "Built To Convert",
-    text: "Hooks, pacing, and CTAs structured around how your audience actually watches.",
+    title: "Premium Craft",
+    text: "Cinematic color, clean sound, sharp pacing. Edits that look and feel high-end.",
   },
 ];
 
@@ -33,19 +33,18 @@ const AboutSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <div className="section-label mb-4">About / 004</div>
+          <div className="section-label mb-4">About / 005</div>
           <h2 className="font-display text-5xl md:text-7xl leading-[0.9]">
-            EDITS THAT<br />
-            <span className="text-primary">EARN ATTENTION.</span>
+            A QUIET EDGE<br />
+            <span className="text-primary">IN A LOUD FEED.</span>
           </h2>
           <p className="text-foreground/70 mt-8 text-lg leading-relaxed max-w-lg">
-            I'm <span className="text-gold">Bhaskar</span> — a video editor obsessed with pacing,
-            story, and the tiny details that make viewers stay. I work with creators,
-            founders, and brands who care about how their content actually performs.
+            I'm <span className="text-gold">Bhaskar</span> — a video editor for creators, founders, and
+            brands who care about how their content actually performs. Not just how it looks.
           </p>
           <p className="text-foreground/60 mt-5 leading-relaxed max-w-lg">
-            From short-form hooks to long-form YouTube and brand films — every edit is
-            crafted to look premium and convert hard.
+            From short-form hooks to long-form YouTube and brand films — every frame is crafted to
+            hold attention, build trust, and turn viewers into customers.
           </p>
 
           <a
@@ -54,7 +53,7 @@ const AboutSection = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 mt-10 px-7 py-4 bg-primary text-primary-foreground font-display tracking-[0.2em] text-sm uppercase hover:bg-gold hover:text-background transition-colors"
           >
-            Let's Work Together →
+            Start Your Project →
           </a>
         </motion.div>
 

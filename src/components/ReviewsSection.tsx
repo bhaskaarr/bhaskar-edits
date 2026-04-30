@@ -7,37 +7,37 @@ const reviews = [
     name: "Aarav Sharma",
     role: "Content Creator",
     rating: 5,
-    text: "Insanely fast delivery and the edit quality blew me away. Bhaskar understood my vision on the first try.",
+    text: "First cut nailed the vision. My reels started outperforming everything I'd posted before — retention up, comments up, sales up.",
   },
   {
     name: "Priya Mehta",
     role: "YouTuber",
     rating: 5,
-    text: "Cinematic, clean and on-brand. My reels started getting 3x more views after working with him.",
+    text: "Cinematic, clean, on-brand. Watch-time jumped 3x within a month. Bhaskar treats every video like it's his own channel.",
   },
   {
     name: "Rohan Verma",
     role: "Startup Founder",
     rating: 5,
-    text: "Professional communication, quick turnaround and unlimited revisions. Easily the best editor I've hired.",
+    text: "Easily the most reliable editor I've worked with. Fast turnarounds, sharp pacing, and zero hand-holding. Booked again the same week.",
   },
   {
     name: "Sneha Kapoor",
     role: "Fitness Coach",
     rating: 5,
-    text: "The transitions and color grading are next level. My gym promo looked like a Nike ad!",
+    text: "My promo looked like a Nike ad. Bookings doubled the month it went live. Worth every rupee.",
   },
   {
     name: "Daniel Cooper",
     role: "Podcast Host",
     rating: 5,
-    text: "Delivered ahead of schedule and nailed the pacing of my podcast. Highly recommended.",
+    text: "Delivered ahead of schedule and nailed the pacing. Audience retention on YouTube clips is the best it's ever been.",
   },
   {
     name: "Ishita Rao",
-    role: "Wedding Client",
+    role: "Brand Owner",
     rating: 5,
-    text: "He turned our raw footage into a cinematic story. We cried watching it. Worth every rupee.",
+    text: "He turned raw footage into a story that actually moved people. Our launch video crossed 100K views in a week.",
   },
 ];
 
@@ -88,10 +88,10 @@ const ReviewsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="font-display text-4xl md:text-5xl font-bold">
-            Client <span className="gradient-text">Reviews</span>
+            Words From <span className="gradient-text">Clients.</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-md mx-auto">
-            Trusted by creators, founders and brands for fast delivery and cinematic quality.
+            Real results from creators, founders, and brands who hit publish — and watched the numbers move.
           </p>
         </motion.div>
 

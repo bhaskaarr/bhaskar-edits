@@ -336,10 +336,10 @@ const WorkSection = () => {
         >
           <div className="section-label mb-4">Selected Work / 002</div>
           <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9]">
-            MY <span className="text-primary">WORK</span>
+            WORK THAT <span className="text-primary">PERFORMS.</span>
           </h2>
           <p className="text-foreground/60 mt-6 max-w-md text-base">
-            A selection of recent projects — showcasing editing style, pacing, and versatility across every format.
+            A handpicked selection of recent edits — built to hold attention, drive watch-time, and convert.
           </p>
         </motion.div>
 

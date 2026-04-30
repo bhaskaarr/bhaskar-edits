@@ -48,12 +48,12 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <div className="section-label justify-center mb-4">Contact / 007</div>
+          <div className="section-label justify-center mb-4">Contact / 009</div>
           <h2 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.9]">
-            LET'S WORK <span className="text-primary">TOGETHER.</span>
+            BUILD SOMETHING <span className="text-primary">UNFORGETTABLE.</span>
           </h2>
           <p className="text-foreground/60 mt-6 text-lg">
-            Limited slots available this month — pick a channel and let's talk.
+            Only 3 client slots open this month. Pick a channel — I usually reply within an hour.
           </p>
         </motion.div>
 
@@ -89,7 +89,7 @@ const ContactSection = () => {
           transition={{ delay: 0.6 }}
           className="text-center mt-20 text-muted-foreground text-xs tracking-[0.2em] uppercase"
         >
-          © {new Date().getFullYear()} Bhaskar Edits. Crafted with passion.
+          © {new Date().getFullYear()} Bhaskar Edits. Built to convert.
         </motion.div>
       </div>
     </section>
