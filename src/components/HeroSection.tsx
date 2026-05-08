@@ -12,6 +12,17 @@ const phrases = [
 const HeroSection = () => {
   const [text, setText] = useState("");
   const [phraseIdx, setPhraseIdx] = useState(0);
+  const [enable3D, setEnable3D] = useState(false);
+
+  useEffect(() => {
+    // Defer 3D mount until after first paint; skip on small screens / reduced motion
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const big = window.matchMedia("(min-width: 768px)").matches;
+    if (!reduced && big) {
+      const t = setTimeout(() => setEnable3D(true), 250);
+      return () => clearTimeout(t);
+    }
+  }, []);
 
   useEffect(() => {
     const target = phrases[phraseIdx];
